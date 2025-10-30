@@ -1,0 +1,13 @@
+# Normalize line endings and improve diff quality
+* text=auto
+
+# Enforce LF endings for shell scripts
+*.sh text eol=lf
+
+# Prefer CRLF endings for PowerShell scripts for Windows users
+*.ps1 text eol=crlf
+
+# Improve diff readability for common formats
+*.md text
+*.yaml text
+*.yml text
