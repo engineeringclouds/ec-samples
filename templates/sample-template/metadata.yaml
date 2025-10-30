@@ -1,0 +1,33 @@
+# Update these fields before committing a new sample.
+title: Sample title
+slug: blog-post-slug
+blog_url: https://engineeringclouds.io/blogs/<blog-post-slug>
+summary: >-
+  Short description of what this sample demonstrates.
+status: draft  # draft | beta | stable | deprecated
+authors:
+  - name: Your Name
+    github: your-handle
+last_tested: 2025-10-29
+runtime:
+  estimated_minutes: 10
+requirements:
+  tools:
+    - name: Azure CLI
+      version: ">=2.60.0"
+    - name: PowerShell
+      version: ">=7.4"
+  services:
+    - name: Azure Subscription
+      description: Requires permission to create resource groups.
+tags:
+  - azure
+  - cli
+validation:
+  commands:
+    - description: Run automated checks
+      run: ./tests/README.md
+cleanup:
+  commands:
+    - description: Remove provisioned resources
+      run: ./scripts/cleanup.sh

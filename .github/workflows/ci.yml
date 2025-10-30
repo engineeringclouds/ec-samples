@@ -1,0 +1,17 @@
+name: ci
+
+on:
+  push:
+    branches: [ main, develop, feature/** ]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Bash
+        run: sudo apt-get update
+      - name: Run repository checks
+        run: tools/check.sh

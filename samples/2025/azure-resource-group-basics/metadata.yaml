@@ -1,0 +1,39 @@
+title: Azure Resource Group Basics
+description: Create, validate, and delete a resource group using Azure CLI and Az PowerShell.
+slug: azure-resource-group-basics
+blog_url: https://engineeringclouds.io/blogs/azure-resource-group-basics
+status: draft
+last_tested: 2025-10-29
+authors:
+  - name: EngineeringClouds Team
+    github: engineeringclouds
+runtime:
+  estimated_minutes: 5
+requirements:
+  tools:
+    - name: Azure CLI
+      version: ">=2.60.0"
+    - name: PowerShell
+      version: ">=7.4"
+    - name: Az.Resources module
+      version: ">=11.3.1"
+  services:
+    - name: Azure Subscription
+      description: Requires permission to create and delete resource groups.
+tags:
+  - azure
+  - cli
+  - powershell
+  - resource-group
+validation:
+  commands:
+    - description: Bash verification script
+      run: ./tests/verify-resource-group.sh
+    - description: PowerShell verification script
+      run: ./tests/verify-resource-group.ps1
+cleanup:
+  commands:
+    - description: Delete resource group (Bash)
+      run: ./scripts/cleanup.sh
+    - description: Delete resource group (PowerShell)
+      run: ./scripts/cleanup.ps1

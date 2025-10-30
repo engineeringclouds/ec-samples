@@ -1,0 +1,8 @@
+# Default owners for the repository
+* @engineeringclouds
+
+# Sample template ownership
+/templates/sample-template/ @engineeringclouds
+
+# Azure samples
+/samples/2025/azure-resource-group-basics/ @engineeringclouds
